@@ -9,6 +9,7 @@
  */
 angular.module('petstoreApp')
   .controller('MainCtrl', function ($scope) {
+
     $scope.pets = [
       {
         name: 'Sprout',

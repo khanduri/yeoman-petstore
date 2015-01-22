@@ -1,6 +1,22 @@
 <div class="row">
+  <h5>Comments</h5>
     <blockquote ng-repeat="comment in pet.comments">
         <b> {{comment.date}} </b>: {{ comment.text }}<br/>
         <cite>{{comment.author}}</cite>
     </blockquote>
+  <form class="well" ng-submit="commentCtrl.addComment(pet)" novalidate>
+    <blockquote>
+      <b> {{commentCtrl.comment.date }}: </b> {{commentCtrl.comment.text}}<br/>
+      <cite> {{commentCtrl.comment.author }}</cite>
+    </blockquote>
+    <div class="form-group">
+      <span ng-model="commentCtrl.comment.date"></span> <br/>
+      <label>Comment: </label>
+      <textarea ng-model="commentCtrl.comment.text" class="form-control" required></textarea>
+      <label>Author:</label>
+      <input type="text" class='form-control' ng-model="commentCtrl.comment.author" required/>
+      <br/>
+      <input type="submit" class="btn btn-primary"/>
+    </div>
+  </form>
 </div>

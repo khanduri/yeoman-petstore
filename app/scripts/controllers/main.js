@@ -17,7 +17,7 @@ angular.module('petstoreApp')
         comments: [{
           author: 'AuthorA',
           text: 'Lorem ipsum dolor sit amet, consectetur',
-          date: 'Jan 08, 2015'
+          date: new Date('Jan 08, 2015').toDateString()
         }]
       }, {
         name: 'Oliver',
@@ -26,11 +26,11 @@ angular.module('petstoreApp')
         comments: [{
           author: 'AuthorB',
           text: 'exercitation ullamco laboris nisi',
-          date: 'Jan 08, 2015'
+          date: new Date('Jan 08, 2015').toDateString()
         }, {
           author: 'AuthorA',
           text: 'Lorem ipsum dolor sit amet, consectetur',
-          date: 'Jan 08, 2015'
+          date: new Date('Jan 08, 2015').toDateString()
         }]
       }, {
         name: 'Doc',

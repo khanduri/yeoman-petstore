@@ -12,6 +12,19 @@ angular.module('petstoreApp')
       templateUrl: 'views/comments.html',
       restrict: 'E',
       controller: function(){
+        var today = new Date();
+
+        this.comment = {
+          date: today.toDateString()
+        }
+
+        this.addComment = function(pet){
+          pet.comments.push(this.comment);
+          this.comment = {
+            date: today.toDateString()
+          }
+        }
+
       },
       controllerAs: 'commentCtrl'
     };
